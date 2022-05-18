@@ -30,6 +30,7 @@ a:hover {
 }
 
 #install-btn {
+  color: white;
   background-color: #5ca210;
   padding: 0.2rem;
   margin-right: 0.4rem;
@@ -59,10 +60,6 @@ a:hover {
           align-items: center;
 }
 
-.adujst-links-pos a {
-  margin-left: 1.55rem;
-}
-
 .navbar-layout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,8 +68,8 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  height: inherit;
   width: min(55rem,90%);
+  height: 2rem;
   margin-inline: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -84,6 +81,19 @@ a:hover {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
+}
+
+.links-wrap-second a {
+  font-size: small;
+  font-weight: bold;
+  padding-top: 0.57rem;
+  padding-inline: 1rem;
+  padding-bottom: 0.43rem;
+}
+
+.links-wrap-second a:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 123, 255, 0.404)), to(rgba(0, 123, 255, 0.103)));
+  background-image: linear-gradient(90deg, rgba(0, 123, 255, 0.404), rgba(0, 123, 255, 0.103));
 }
 
 .container {
@@ -196,13 +206,7 @@ a:hover {
       align-self: flex-start;
 }
 
-.dropdown > .nav-link {
-  margin: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 300;
-}
-
-.links-wrap > .nav-link {
+.links-wrap-main > * {
   margin: 0.5rem;
   font-size: 0.7rem;
   font-weight: 300;
