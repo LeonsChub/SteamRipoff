@@ -108,21 +108,17 @@ a:hover {
 
 }
 
-.container{
-    width: 100%;
+.featured-window-wrap{
+    width: $base-width;
     margin-inline: auto;
     margin-top: 1rem;
-    height: 21.48rem;
+    height: 21.5rem;
     display: flex;
     flex-flow: row;
+    
+    
 
-    .main-window{
-        width: 37.5em;
-        max-height: 100%;
-        flex-grow: 8;
-    }
-
-    .game-window{
+    .info-window{
         flex-grow: 4;
         max-width: 33.334%;
         
@@ -159,36 +155,59 @@ a:hover {
                 }
             }
             
-
         }
         
-
+        .flair{
+            font-size: 0.6rem;
+            padding-inline: 1rem;
+            margin-top: 0.5rem;
+        }
+    
+        .price{
+            font-size: 0.6rem;
+            position: relative;
+            left: 1rem;
+            top: 3rem;
+                
+        }
         
     }
-    .flair{
-        font-size: 0.6rem;
-        padding-inline: 1rem;
-        margin-top: 0.5rem;
-    }
-
-    .price{
-        font-size: 0.6rem;
-        position: relative;
-        left: 1rem;
-        top: 3rem;
-            
-    }
+    
 }
 
-.featured-window-wrap{
+.container{
 
-    width: $base-width;
+    width: 100%;
     margin-inline: auto;
     
     margin-top: 3em;
 
     .title{
+        width: $base-width;
         font-weight: 300;
+        margin-inline: auto;
+    }
+
+    .gallery{
+        width: 95%;
+        height: 50%;
+        display: grid;
+
+        grid-template-columns: 10.125em;
+        grid-template-rows: 4.375em;
+
+        grid-gap:0.5rem;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .gal-item{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
     }
     
 }
