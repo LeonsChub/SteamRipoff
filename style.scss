@@ -8,6 +8,7 @@ $bg-blue : rgb(59,100,145);
 $muted-grey:rgb(25,42,59);
 
 $base-width : #{'min(55rem,90%)'};
+$card-width : 16.8rem;
 $navbar-size : 5rem;
 
 *{
@@ -109,9 +110,8 @@ a:hover {
 }
 
 .featured-window-wrap{
-    width: $base-width;
+    width: 100%;
     margin-inline: auto;
-    margin-top: 1rem;
     height: 21.5rem;
     display: flex;
     flex-flow: row;
@@ -177,38 +177,38 @@ a:hover {
 
 .container{
 
-    width: 100%;
+    width: $base-width;;
     margin-inline: auto;
     
     margin-top: 3em;
+    display: flex;
+    flex-flow: column;
 
     .title{
-        width: $base-width;
+        margin-bottom: 1rem;
+        width: 100%;
         font-weight: 300;
-        margin-inline: auto;
-    }
-
-    .gallery{
-        width: 95%;
-        height: 50%;
-        display: grid;
-
-        grid-template-columns: 10.125em;
-        grid-template-rows: 4.375em;
-
-        grid-gap:0.5rem;
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
-        .gal-item{
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
         
     }
+    
+}
+
+.cards-wrap{
+    display: flex;
+    justify-content: space-between;
+    height: 21.5rem;
+
+    .card{
+        width: $card-width;
+        max-height: fit-content;
+    }
+    
+
+}
+
+
+.window{
+    position: relative;
     
 }
 
