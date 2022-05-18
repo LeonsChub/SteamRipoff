@@ -15,6 +15,7 @@ $navbar-size : 5rem;
     color: $font-color;
 }
 
+
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -33,6 +34,12 @@ img{
 a{
     text-decoration: none;
 }
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
 
 #install-btn{
     background-color: $bold-color;
@@ -61,7 +68,7 @@ a{
     justify-content: space-between;
     align-items: center;
     
- 
+
 }
 
 .adujst-links-pos{
@@ -86,6 +93,8 @@ a{
 
     justify-content: space-between;
     flex-grow: 3;
+
+    
 }
 
 .container{
@@ -189,10 +198,46 @@ a{
     justify-self: flex-end ;
     align-self: flex-start;
 }
-.links-wrap > *{
-    margin:0.25rem;
-    font-weight: 600;
+
+.dropdown> .nav-link {
+    margin:0.5rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+
 }
+.links-wrap> .nav-link {
+    margin:0.5rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $accent-color;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    a:hover {
+        color: rgb(255, 255, 255);
+      }
+}
+.dropdown-content a {
+    color: $font-color;
+    padding: 0.5em 0.5em;
+    display: block;
+    font-size: small;
+  }
+  .dropdown:hover .dropdown-content {display: block;}
+  
 .search-wrap{
     display: flex;
 
