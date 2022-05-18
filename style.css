@@ -45,7 +45,7 @@ a {
       -ms-flex-flow: row;
           flex-flow: row;
   height: inherit;
-  width: min(70rem,90%);
+  width: min(55rem,90%);
   margin-inline: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -68,7 +68,7 @@ a {
       -ms-flex-flow: row;
           flex-flow: row;
   height: inherit;
-  width: min(70rem,90%);
+  width: min(55rem,90%);
   margin-inline: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -86,7 +86,7 @@ a {
   width: 100%;
   margin-inline: auto;
   margin-top: 1rem;
-  height: 25rem;
+  height: 21.48rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +97,7 @@ a {
 }
 
 .container .main-window {
-  max-width: 66.666%;
+  width: 37.5em;
   max-height: 100%;
   -webkit-box-flex: 8;
       -ms-flex-positive: 8;
@@ -108,6 +108,8 @@ a {
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
+  max-width: 33.334%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,14 +127,46 @@ a {
 
 .container .game-window .gallery {
   width: 95%;
-  background-color: aquamarine;
   height: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10.125em;
+      grid-template-columns: 10.125em;
+  -ms-grid-rows: 4.375em;
+      grid-template-rows: 4.375em;
+  grid-gap: 0.5rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+.container .game-window .gallery .gal-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .flair {
+  font-size: 0.6rem;
+  padding-inline: 1rem;
+  margin-top: 0.5rem;
+}
+
+.container .price {
+  font-size: 0.6rem;
+  position: relative;
+  left: 1rem;
+  top: 3rem;
 }
 
 .featured-window-wrap {
-  width: min(70rem,90%);
+  width: min(55rem,90%);
   margin-inline: auto;
   margin-top: 3em;
+}
+
+.featured-window-wrap .title {
+  font-weight: 300;
 }
 
 .logo-wrap {
