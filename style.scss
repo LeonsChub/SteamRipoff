@@ -8,6 +8,7 @@ $bg-blue : rgb(59,100,145);
 $muted-grey:rgb(25,42,59);
 
 $base-width : #{'min(55rem,90%)'};
+$mobile-width : #{'min(616px,97%)'};
 $card-width : 16.8rem;
 $navbar-size : 5rem;
 
@@ -40,6 +41,10 @@ a:hover {
     color: rgb(255, 255, 255);
 }
 
+.bars-icon{
+    display: none;
+}
+
 
 
 #install-btn{
@@ -53,7 +58,7 @@ a:hover {
 
 .logo-wrap{
     height: 100%;
-    margin-right: 1em;
+
     
     div{
         height: inherit;
@@ -98,20 +103,21 @@ a:hover {
 
 @media only screen and (max-width: 900px) {
     .navbar-wrap{
-
         height: 3em;
         width: 100%;
+        display: flex;
+        position: relative;
 
         .links-wrap-main , .user-links-wrap {
             visibility: hidden;
             display: none;
         }
 
-        .logo-wrap{
-            margin: 0;
-    
+        .main-nav-layout{
+            display: flex;
+            
+            justify-content: space-between;
         }
-        
         
     }
   }
@@ -148,11 +154,15 @@ a:hover {
     a:hover{
         background-image: linear-gradient(90deg,rgba(0, 123, 255, 0.404),rgba(0, 123, 255, 0.103));
     }
-
-
-
 }
 
+@media only screen and (max-width: 900px) {
+    .secondary-navbar{
+        visibility: hidden;
+        display: none;
+  }
+
+}
 .featured-window-wrap{
     width: 100%;
     margin-inline: auto;
@@ -163,7 +173,7 @@ a:hover {
     
 
     .info-window{
-        max-width: 33.334%;
+        width: 33.334%;
         
         position: relative;
 
@@ -223,7 +233,7 @@ a:hover {
     width: $base-width;;
     margin-inline: auto;
     
-    margin-top: 3em;
+    margin-top: 3rem;
     display: flex;
     flex-flow: column;
 
@@ -236,10 +246,46 @@ a:hover {
     
 }
 
+@media only screen and (max-width: 900px) {
+    .container{
+        width: $mobile-width;
+        margin-top: 2em;
+        margin-bottom: 6em;
+    }
+    .featured-window-wrap{
+        
+        height: 21.5rem;
+        flex-flow: column;
+
+        .info-window{
+            width: 100%;
+            height: auto;
+            max-height : 6rem;
+
+            display: flex;
+            flex-flow: column;
+
+            background-image:  linear-gradient(rgba(0, 0, 0, 0.226),rgba(255, 255, 255, 0.103));
+
+            .price{
+                position: absolute;
+                margin-top: 2em;
+                padding: 0;
+            }
+
+            .gallery ,.flair{
+                visibility: hidden;
+            }
+        }
+
+    }
+}
 .cards-wrap{
     display: flex;
-    justify-content: space-between;
+    gap: 1em;
     height: 21.5rem;
+
+    justify-content: flex-start;
 
     .card{
         width: $card-width;
@@ -275,7 +321,7 @@ a:hover {
     display: none;
     position: absolute;
     background-color: $accent-color;
-    min-width: 140px;
+    min-width: 9.5em;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 
