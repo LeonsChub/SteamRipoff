@@ -108,6 +108,11 @@ a:hover {
         display: flex;
         position: relative;
 
+        .menu-logo{
+            display: block;
+            visibility: visible;
+        }
+
         .links-wrap-main , .user-links-wrap {
             visibility: hidden;
             display: none;
@@ -120,6 +125,8 @@ a:hover {
         }
         
     }
+
+    
   }
 
 
@@ -250,11 +257,11 @@ a:hover {
     .container{
         width: $mobile-width;
         margin-top: 2em;
-        margin-bottom: 6em;
+        
     }
     .featured-window-wrap{
         
-        height: 21.5rem;
+        height: #{'min(21.5em,10%)'};
         flex-flow: column;
 
         .info-window{
@@ -280,15 +287,18 @@ a:hover {
 
     }
 }
+
 .cards-wrap{
     display: flex;
-    gap: 1em;
+    flex-flow: row nowrap;
+
+    
     height: 21.5rem;
 
-    justify-content: flex-start;
+    justify-content: space-between;
 
     .card{
-        width: $card-width;
+        width: 17em;
         max-height: fit-content;
     }
     
@@ -301,6 +311,10 @@ a:hover {
     
 }
 
+.menu-logo{
+    visibility: hidden;
+    display: none;
+}
 
 
 
