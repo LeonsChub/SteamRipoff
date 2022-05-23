@@ -36,12 +36,31 @@ a:hover {
   margin-right: 0.4rem;
 }
 
+.logo-wrap {
+  height: 100%;
+  margin-right: 1em;
+}
+
+.logo-wrap div {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo-txt {
-  margin-left: 1rem;
+  margin-left: 0.7em;
   font-weight: 700;
 }
 
-.main-nav-layout {
+.navbar-wrap {
+  height: 6em;
+}
+
+.navbar-wrap .main-nav-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +77,37 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.navbar-wrap .user-links-wrap {
+  padding: 0.6rem;
+  font-size: 0.66rem;
+  justify-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar-wrap {
+    height: 3em;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  .navbar-wrap .main-nav-layout {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  .navbar-wrap .links-wrap-main, .navbar-wrap .user-links-wrap {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .navbar-layout {
@@ -110,9 +160,6 @@ a:hover {
 }
 
 .featured-window-wrap .info-window {
-  -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
   max-width: 33.334%;
   position: relative;
   display: -webkit-box;
@@ -204,29 +251,6 @@ a:hover {
   position: relative;
 }
 
-.logo-wrap {
-  height: 5rem;
-  margin-right: 1rem;
-}
-
-.logo-wrap div {
-  height: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.user-links-wrap {
-  padding: 0.6rem;
-  font-size: 0.66rem;
-  justify-self: flex-end;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
 .links-wrap-main > * {
   margin: 0.5rem;
   font-size: 0.7rem;
@@ -274,10 +298,6 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.navbar-wrap {
-  height: 6em;
 }
 
 .bg-g-blue {
